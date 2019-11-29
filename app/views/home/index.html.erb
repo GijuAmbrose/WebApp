@@ -1,0 +1,12 @@
+<h1>Welcome to the Home page</h1>
+
+<% if user_signed_in? %>
+<li><%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<% else  %>
+<%= link_to('Login', new_user_session_path) %></li>
+<%end%>
+<ul>
+<li><%= link_to('Upload', home_upload_path)%><li>
+<%= link_to('List Users', home_employees_path)%>
+</ul>
+
